@@ -17,8 +17,12 @@ export default function Navbar() {
   const links = ['Home', 'About Us', 'Services', 'Doctors', 'Patient Guide', 'Contact Us']
 
   const scrollTo = (section) => {
-    const id = section.toLowerCase().replace(/\s+/g, '-')
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    if (section === 'appointment') {
+      document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      const id = section.toLowerCase().replace(/\s+/g, '-')
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    }
     setMenuOpen(false)
   }
 
