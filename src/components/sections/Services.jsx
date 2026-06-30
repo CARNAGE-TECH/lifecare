@@ -41,8 +41,11 @@ export default function Services() {
               </div>
               <h3 className="font-display text-xl font-bold text-medical-blue mb-3">{s.title}</h3>
               <p className="text-text-muted text-sm leading-relaxed mb-4">{s.desc}</p>
-              <button className="flex items-center gap-1 text-royal-blue text-sm font-semibold hover:gap-2 transition-all">
-                Learn More <FiArrowRight size={14} />
+              <button
+                type="button"
+                onClick={() => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })}
+                className="flex items-center gap-1 text-royal-blue text-sm font-semibold hover:gap-2 transition-all">
+                Book This Service <FiArrowRight size={14} />
               </button>
             </motion.div>
           ))}

@@ -1,36 +1,26 @@
-# LifeCare Hospital 🏥
+# LifeCare Hospital
 
-> A premium, fully responsive hospital website built with React and Vite — designed to reflect the standards of a world-class private medical institution.
+LifeCare Hospital is a responsive healthcare website built with React, Vite, Tailwind CSS, Framer Motion, and React Icons. It is designed as a polished frontend project for a modern private hospital, with appointment booking UI, department sections, doctor cards, patient resources, testimonials, emergency contact details, and a contact form.
 
-**Live Demo:** *(paste your Vercel link here)*
-**GitHub:** [github.com/CARNAGE-TECH/lifecare](https://github.com/CARNAGE-TECH/lifecare)
+## Project Status
 
----
-
-## Overview
-
-LifeCare Hospital is a modern healthcare web presence built with a luxury medical aesthetic. It features smooth Framer Motion animations, a working appointment booking system, animated statistics counters, an auto-sliding testimonials carousel, and a fully responsive layout optimized for desktop, tablet, and mobile.
-
----
+This is a frontend-only project. The appointment booking and contact forms show local success states in the browser, but no backend, database, email service, or API integration is connected.
 
 ## Features
 
-- **Sticky Navbar** with blur effect, smooth scroll navigation, and mobile hamburger menu
-- **Hero Section** with floating animation, floating stat badges, and gradient headline
-- **Appointment Booking** with department and doctor dropdowns that sync dynamically
-- **6 Service Cards** with hover lift and glow effects
-- **Animated Statistics Counter** that triggers on scroll into view
-- **About Section** with reveal animations
-- **Why Choose Us** — 4 feature cards with hover effects
-- **Doctor Cards** with image zoom on hover and social links
-- **Auto-sliding Testimonials Carousel** with manual navigation
-- **Emergency Banner** with direct call link
-- **Patient Resources** section
-- **Health Articles** blog preview
-- **Contact Form** with success state
-- **Luxury Dark Footer** with all navigation
-
----
+- Sticky responsive navbar with smooth in-page navigation
+- Hospital hero section with appointment and doctor CTAs
+- Appointment booking UI with department, doctor, patient type, date, and time fields
+- Services section with booking-oriented actions
+- Animated statistics section
+- About section with patient safety and quality highlights
+- Doctor cards with clinic availability and booking actions
+- Auto-sliding testimonials carousel with manual controls
+- Emergency banner with direct call link
+- Patient resources and health article preview sections
+- Contact form with local success state
+- Responsive layout for desktop, tablet, and mobile
+- Reduced-motion CSS support for users who prefer less animation
 
 ## Tech Stack
 
@@ -41,9 +31,6 @@ LifeCare Hospital is a modern healthcare web presence built with a luxury medica
 | Framer Motion | Animations and transitions |
 | React Icons | Icon library |
 | Google Fonts | Playfair Display + Inter typography |
-| Vercel | Deployment |
-
----
 
 ## Getting Started
 
@@ -54,68 +41,56 @@ npm install
 npm run dev
 ```
 
----
+## Available Scripts
+
+```bash
+npm run dev
+npm run build
+npm run lint
+npm run preview
+```
 
 ## Project Structure
 
+```text
 src/
+  components/
+    layout/
+      Navbar.jsx
+      Footer.jsx
+    sections/
+      Hero.jsx
+      AppointmentBooking.jsx
+      Services.jsx
+      Statistics.jsx
+      About.jsx
+      WhyChooseUs.jsx
+      Doctors.jsx
+      Testimonials.jsx
+      EmergencyBanner.jsx
+      PatientResources.jsx
+      HealthArticles.jsx
+      Contact.jsx
+  App.jsx
+  main.jsx
+  index.css
+```
 
-├── components/
+## Possible Next Steps
 
-│   ├── layout/
-
-│   │   ├── Navbar.jsx
-
-│   │   └── Footer.jsx
-
-│   └── sections/
-
-│       ├── Hero.jsx
-
-│       ├── AppointmentBooking.jsx
-
-│       ├── Services.jsx
-
-│       ├── Statistics.jsx
-
-│       ├── About.jsx
-
-│       ├── WhyChooseUs.jsx
-
-│       ├── Doctors.jsx
-
-│       ├── Testimonials.jsx
-
-│       ├── EmergencyBanner.jsx
-
-│       ├── PatientResources.jsx
-
-│       ├── HealthArticles.jsx
-
-│       └── Contact.jsx
-
-└── App.jsx
-
----
-
-## Roadmap
-
-- [ ] Backend integration for appointment booking
-- [ ] Patient portal with Firebase Auth
-- [ ] Doctor profile pages
-- [ ] Online bill payment
-- [ ] Multi-language support
-
----
+- Connect appointment booking to a backend or form service
+- Add real doctor profile pages
+- Add a patient portal authentication flow
+- Add multilingual content
+- Add real privacy policy and terms pages
 
 ## Author
 
-**Joseph Omokwale**
-OMTECH INNOVATORS — *The Future of Tech...*
-📍 Edo State, Nigeria
-🌐 [omtech-portfolio.vercel.app](https://omtech-portfolio.vercel.app)
-
----
+Joseph Omokwale  
+OMTECH INNOVATORS - The Future of Tech  
+Edo State, Nigeria  
+https://omtech-portfolio.vercel.app
 
 ## License
+
 MIT License

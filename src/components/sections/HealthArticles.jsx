@@ -8,6 +8,8 @@ const articles = [
 ]
 
 export default function HealthArticles() {
+  const scrollToAppointment = () => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })
+
   return (
     <section className="py-24 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -43,8 +45,11 @@ export default function HealthArticles() {
                 </div>
                 <h3 className="font-display text-lg font-bold text-medical-blue mb-3 leading-tight">{a.title}</h3>
                 <p className="text-text-muted text-sm leading-relaxed mb-4">{a.desc}</p>
-                <button className="flex items-center gap-1 text-royal-blue text-sm font-semibold hover:gap-2 transition-all">
-                  Read More <FiArrowRight size={14} />
+                <button
+                  type="button"
+                  onClick={scrollToAppointment}
+                  className="flex items-center gap-1 text-royal-blue text-sm font-semibold hover:gap-2 transition-all">
+                  Discuss With a Doctor <FiArrowRight size={14} />
                 </button>
               </div>
             </motion.div>

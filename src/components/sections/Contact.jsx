@@ -14,11 +14,11 @@ export default function Contact() {
   }
 
   const info = [
-    { icon: <FiMapPin size={20} />, label: 'Address', value: '123 HealthCare Avenue, Wellness City, 560001' },
+    { icon: <FiMapPin size={20} />, label: 'Address', value: '12 Airport Road, Benin City, Edo State' },
     { icon: <FiMail size={20} />, label: 'Email', value: 'info@lifecarehospital.com' },
-    { icon: <FiPhone size={20} />, label: 'Phone', value: '+91 12345 67890' },
-    { icon: <FiPhone size={20} />, label: 'Emergency', value: '+91 98765 43210', emergency: true },
-    { icon: <FiClock size={20} />, label: 'Hours', value: 'Mon–Sat: 8am–8pm | Emergency: 24/7' },
+    { icon: <FiPhone size={20} />, label: 'Phone', value: '+234 700 123 4567' },
+    { icon: <FiPhone size={20} />, label: 'Emergency', value: '+234 800 911 0000', emergency: true },
+    { icon: <FiClock size={20} />, label: 'Hours', value: 'Mon-Sat: 8am-8pm | Emergency: 24/7' },
   ]
 
   const inputStyle = "w-full px-4 py-3 border border-border-color rounded-xl text-sm text-text-dark bg-white outline-none focus:border-royal-blue focus:ring-2 focus:ring-royal-blue/10 transition-all placeholder:text-text-muted/50"
@@ -37,8 +37,6 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-          {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -58,23 +56,23 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="text-xs font-semibold text-text-muted tracking-wider block mb-2">NAME</label>
-                    <input value={form.name} onChange={e => setForm({...form, name: e.target.value})}
+                    <input value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
                       className={inputStyle} placeholder="Your full name" required />
                   </div>
                   <div>
                     <label className="text-xs font-semibold text-text-muted tracking-wider block mb-2">EMAIL</label>
-                    <input type="email" value={form.email} onChange={e => setForm({...form, email: e.target.value})}
+                    <input type="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })}
                       className={inputStyle} placeholder="you@email.com" required />
                   </div>
                 </div>
                 <div>
                   <label className="text-xs font-semibold text-text-muted tracking-wider block mb-2">PHONE</label>
-                  <input type="tel" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})}
-                    className={inputStyle} placeholder="+1 (555) 000-0000" />
+                  <input type="tel" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })}
+                    className={inputStyle} placeholder="+234 700 000 0000" />
                 </div>
                 <div>
                   <label className="text-xs font-semibold text-text-muted tracking-wider block mb-2">MESSAGE</label>
-                  <textarea value={form.message} onChange={e => setForm({...form, message: e.target.value})}
+                  <textarea value={form.message} onChange={e => setForm({ ...form, message: e.target.value })}
                     rows={4} className={`${inputStyle} resize-none`}
                     placeholder="How can we help you?" required />
                 </div>
@@ -86,7 +84,6 @@ export default function Contact() {
             )}
           </motion.div>
 
-          {/* Info */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -109,12 +106,11 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Map placeholder */}
             <div className="bg-sky-blue rounded-3xl h-48 flex items-center justify-center border border-border-color">
               <div className="text-center text-royal-blue">
                 <FiMapPin size={32} className="mx-auto mb-2" />
-                <p className="text-sm font-semibold">123 HealthCare Avenue</p>
-                <p className="text-xs text-text-muted">Wellness City, 560001</p>
+                <p className="text-sm font-semibold">12 Airport Road</p>
+                <p className="text-xs text-text-muted">Benin City, Edo State</p>
               </div>
             </div>
           </motion.div>

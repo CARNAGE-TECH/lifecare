@@ -16,7 +16,7 @@ export default function Hero() {
 
           <div className="inline-flex items-center gap-2 bg-royal-blue/10 text-royal-blue text-xs font-semibold px-4 py-2 rounded-full mb-6">
             <div className="w-2 h-2 bg-success rounded-full animate-pulse" />
-            World-Class Medical Care
+            Patient-first medical care
           </div>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-medical-blue leading-tight mb-6">
@@ -90,8 +90,8 @@ export default function Hero() {
               <FiUsers size={22} className="text-success" />
             </div>
             <div>
-              <div className="font-bold text-xl text-text-dark">1M+</div>
-              <div className="text-xs text-text-muted">Happy Patients</div>
+              <div className="font-bold text-xl text-text-dark">24/7</div>
+              <div className="text-xs text-text-muted">Emergency Care</div>
             </div>
           </motion.div>
 
@@ -107,8 +107,8 @@ export default function Hero() {
                 </svg>
               ))}
             </div>
-            <div className="text-xs font-semibold text-text-dark">Rated #1 Hospital</div>
-            <div className="text-xs text-text-muted">in Patient Care</div>
+            <div className="text-xs font-semibold text-text-dark">Trusted Care Team</div>
+            <div className="text-xs text-text-muted">Focused on safety</div>
           </motion.div>
 
           {/* Background decoration */}

@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import { FiAward, FiCpu, FiHeart, FiPhone } from 'react-icons/fi'
 
 const reasons = [
-  { icon: <FiAward size={28} />, title: 'Experienced Specialists', desc: 'World-class physicians and surgeons with decades of expertise across every medical specialty.', color: 'text-royal-blue', bg: 'bg-blue-50' },
-  { icon: <FiCpu size={28} />, title: 'Advanced Medical Equipment', desc: 'Latest diagnostic and treatment technologies for precise, effective patient care.', color: 'text-purple-600', bg: 'bg-purple-50' },
+  { icon: <FiAward size={28} />, title: 'Experienced Specialists', desc: 'Senior clinicians and care teams across major medical specialties.', color: 'text-royal-blue', bg: 'bg-blue-50' },
+  { icon: <FiCpu size={28} />, title: 'Advanced Medical Equipment', desc: 'Modern diagnostic and treatment tools that support accurate, timely decisions.', color: 'text-purple-600', bg: 'bg-purple-50' },
   { icon: <FiHeart size={28} />, title: 'Patient-Centered Care', desc: 'A compassionate healthcare experience tailored to each patient\'s unique needs and well-being.', color: 'text-rose-500', bg: 'bg-rose-50' },
   { icon: <FiPhone size={28} />, title: '24/7 Emergency Support', desc: 'Always available for urgent care with rapid response teams ready around the clock.', color: 'text-success', bg: 'bg-green-50' },
 ]

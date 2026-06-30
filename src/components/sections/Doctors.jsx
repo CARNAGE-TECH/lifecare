@@ -2,10 +2,10 @@ import { motion } from 'framer-motion'
 import { FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi'
 
 const doctors = [
-  { name: 'Dr. Sarah Johnson', specialty: 'Cardiology', exp: '15 Years Experience', img: 'https://plus.unsplash.com/premium_photo-1664475543697-229156438e1e?w=600&auto=format&fit=crop&face' },
-  { name: 'Dr. Michael Lee', specialty: 'Neurology', exp: '12 Years Experience', img: 'https://images.unsplash.com/photo-1712215544003-af10130f8eb3?w=600&auto=format&fit=crop&face' },
-  { name: 'Dr. Emily Carter', specialty: 'Orthopedics', exp: '18 Years Experience', img: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80&fit=crop&face' },
-  { name: 'Dr. James Wilson', specialty: 'General Medicine', exp: '20 Years Experience', img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&q=80&fit=crop&face' },
+  { name: 'Dr. Sarah Johnson', specialty: 'Cardiology', exp: '15 Years Experience', schedule: 'Mon, Wed, Fri', img: 'https://plus.unsplash.com/premium_photo-1664475543697-229156438e1e?w=600&auto=format&fit=crop&face' },
+  { name: 'Dr. Michael Lee', specialty: 'Neurology', exp: '12 Years Experience', schedule: 'Tue, Thu, Sat', img: 'https://images.unsplash.com/photo-1712215544003-af10130f8eb3?w=600&auto=format&fit=crop&face' },
+  { name: 'Dr. Emily Carter', specialty: 'Orthopedics', exp: '18 Years Experience', schedule: 'Mon, Tue, Thu', img: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80&fit=crop&face' },
+  { name: 'Dr. James Wilson', specialty: 'General Medicine', exp: '20 Years Experience', schedule: 'Daily Clinic', img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&q=80&fit=crop&face' },
 ]
 
 export default function Doctors() {
@@ -38,13 +38,20 @@ export default function Doctors() {
                 <h3 className="font-display text-lg font-bold text-medical-blue">{doc.name}</h3>
                 <p className="text-royal-blue text-sm font-semibold mt-1">{doc.specialty}</p>
                 <p className="text-text-muted text-xs mt-1">{doc.exp}</p>
+                <p className="text-text-muted text-xs mt-1">Clinic: {doc.schedule}</p>
                 <div className="flex gap-3 mt-4">
                   {[FiLinkedin, FiTwitter, FiMail].map((Icon, j) => (
-                    <button key={j} className="w-8 h-8 bg-sky-blue rounded-lg flex items-center justify-center text-royal-blue hover:bg-royal-blue hover:text-white transition-colors">
+                    <button key={j} type="button" aria-label={`${doc.name} ${['LinkedIn', 'Twitter', 'email'][j]}`} className="w-8 h-8 bg-sky-blue rounded-lg flex items-center justify-center text-royal-blue hover:bg-royal-blue hover:text-white transition-colors">
                       <Icon size={14} />
                     </button>
                   ))}
                 </div>
+                <button
+                  type="button"
+                  onClick={() => document.getElementById('appointment')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="mt-4 w-full bg-royal-blue text-white text-sm font-semibold py-3 rounded-xl hover:bg-medical-blue transition-colors">
+                  Book With {doc.name.split(' ')[1]}
+                </button>
               </div>
             </motion.div>
           ))}

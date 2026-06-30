@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { FiUsers, FiUser, FiHome, FiSmile } from 'react-icons/fi'
+import { FiUser, FiHome, FiSmile, FiShield } from 'react-icons/fi'
 
 const stats = [
   { icon: <FiHome size={32} />, value: 25, suffix: '+', label: 'Years of Excellence' },
-  { icon: <FiUser size={32} />, value: 250, suffix: '+', label: 'Expert Doctors' },
-  { icon: <FiHome size={32} />, value: 500, suffix: '+', label: 'Hospital Beds' },
-  { icon: <FiSmile size={32} />, value: 1, suffix: 'M+', label: 'Happy Patients' },
+  { icon: <FiUser size={32} />, value: 120, suffix: '+', label: 'Specialists & Clinicians' },
+  { icon: <FiShield size={32} />, value: 30, suffix: '+', label: 'Partner Insurers' },
+  { icon: <FiSmile size={32} />, value: 98, suffix: '%', label: 'Patient Satisfaction' },
 ]
 
 function Counter({ value, suffix }) {

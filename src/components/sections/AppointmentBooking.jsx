@@ -16,10 +16,12 @@ export default function AppointmentBooking() {
   const [dept, setDept] = useState('')
   const [doctor, setDoctor] = useState('')
   const [date, setDate] = useState('')
+  const [time, setTime] = useState('')
+  const [patientType, setPatientType] = useState('New patient')
   const [submitted, setSubmitted] = useState(false)
 
   const handleBook = () => {
-    if (!dept || !doctor || !date) return
+    if (!dept || !doctor || !date || !time) return
     setSubmitted(true)
     setTimeout(() => setSubmitted(false), 3000)
   }
@@ -39,7 +41,7 @@ export default function AppointmentBooking() {
               <p className="text-sm text-text-muted">Your health, our priority.</p>
             </div>
 
-            <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+            <div className="flex-1 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 w-full">
               {/* Department */}
               <div className="relative">
                 <label className="text-xs font-semibold text-text-muted tracking-wider block mb-2">DEPARTMENT</label>
@@ -67,6 +69,18 @@ export default function AppointmentBooking() {
                 </div>
               </div>
 
+              <div className="relative">
+                <label className="text-xs font-semibold text-text-muted tracking-wider block mb-2">PATIENT TYPE</label>
+                <div className="relative">
+                  <FiUser size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-royal-blue" />
+                  <select value={patientType} onChange={e => setPatientType(e.target.value)}
+                    className="w-full pl-9 pr-4 py-3 border border-border-color rounded-xl text-sm text-text-dark bg-white outline-none focus:border-royal-blue focus:ring-2 focus:ring-royal-blue/10 transition-all appearance-none cursor-pointer">
+                    <option>New patient</option>
+                    <option>Returning patient</option>
+                  </select>
+                </div>
+              </div>
+
               {/* Date */}
               <div className="relative">
                 <label className="text-xs font-semibold text-text-muted tracking-wider block mb-2">DATE</label>
@@ -77,9 +91,23 @@ export default function AppointmentBooking() {
                     className="w-full pl-9 pr-4 py-3 border border-border-color rounded-xl text-sm text-text-dark bg-white outline-none focus:border-royal-blue focus:ring-2 focus:ring-royal-blue/10 transition-all" />
                 </div>
               </div>
+
+              <div className="relative">
+                <label className="text-xs font-semibold text-text-muted tracking-wider block mb-2">TIME</label>
+                <div className="relative">
+                  <FiCalendar size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-royal-blue" />
+                  <select value={time} onChange={e => setTime(e.target.value)}
+                    className="w-full pl-9 pr-4 py-3 border border-border-color rounded-xl text-sm text-text-dark bg-white outline-none focus:border-royal-blue focus:ring-2 focus:ring-royal-blue/10 transition-all appearance-none cursor-pointer">
+                    <option value="">Preferred Time</option>
+                    <option>Morning</option>
+                    <option>Afternoon</option>
+                    <option>Evening</option>
+                  </select>
+                </div>
+              </div>
             </div>
 
-            <button onClick={handleBook}
+            <button type="button" onClick={handleBook}
               className={`flex items-center gap-2 font-semibold px-8 py-3 rounded-xl transition-all flex-shrink-0 ${
                 submitted
                   ? 'bg-success text-white'

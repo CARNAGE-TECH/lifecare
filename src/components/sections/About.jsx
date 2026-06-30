@@ -2,10 +2,10 @@ import { motion } from 'framer-motion'
 import { FiCheckCircle, FiArrowRight } from 'react-icons/fi'
 
 const points = [
-  'State-of-the-art diagnostic and treatment technology',
-  'Over 250 board-certified specialists across all departments',
-  'Patient-centered care with 24/7 support',
-  'ISO-certified quality management systems',
+  'Modern diagnostic and treatment technology',
+  'Specialist-led care across major departments',
+  'Patient-centered support from admission to follow-up',
+  'Clear safety, privacy, and quality standards',
 ]
 
 export default function About() {
@@ -45,7 +45,7 @@ export default function About() {
             At LifeCare Hospital, we combine advanced medical technology with compassionate care to deliver the best possible outcomes. Our team of experts is dedicated to your health and well-being, providing personalized treatment for every patient.
           </p>
           <p className="text-text-muted leading-relaxed mb-8">
-            Since our founding, we have been committed to excellence in healthcare, investing in the latest medical technologies and attracting the world's finest physicians and surgeons.
+            Since our founding, we have focused on practical access, careful diagnosis, and respectful communication, so patients and families understand each step of their care.
           </p>
 
           <div className="space-y-3 mb-8">
@@ -57,8 +57,11 @@ export default function About() {
             ))}
           </div>
 
-          <button className="flex items-center gap-2 bg-royal-blue text-white font-semibold px-7 py-4 rounded-xl hover:bg-medical-blue transition-all shadow-lg shadow-royal-blue/25 hover:-translate-y-0.5">
-            Learn More About Us <FiArrowRight size={16} />
+          <button
+            type="button"
+            onClick={() => document.getElementById('patient-guide')?.scrollIntoView({ behavior: 'smooth' })}
+            className="flex items-center gap-2 bg-royal-blue text-white font-semibold px-7 py-4 rounded-xl hover:bg-medical-blue transition-all shadow-lg shadow-royal-blue/25 hover:-translate-y-0.5">
+            View Patient Guide <FiArrowRight size={16} />
           </button>
         </motion.div>
       </div>

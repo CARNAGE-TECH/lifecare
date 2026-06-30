@@ -9,6 +9,8 @@ const resources = [
 ]
 
 export default function PatientResources() {
+  const scrollToContact = () => document.getElementById('contact-us')?.scrollIntoView({ behavior: 'smooth' })
+
   return (
     <section id="patient-guide" className="py-24 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -36,8 +38,11 @@ export default function PatientResources() {
               </div>
               <h3 className="font-display text-lg font-bold text-medical-blue mb-3">{r.title}</h3>
               <p className="text-text-muted text-sm leading-relaxed mb-4">{r.desc}</p>
-              <button className={`flex items-center gap-1 text-sm font-semibold ${r.color} hover:gap-2 transition-all`}>
-                Learn More <FiArrowRight size={14} />
+              <button
+                type="button"
+                onClick={scrollToContact}
+                className={`flex items-center gap-1 text-sm font-semibold ${r.color} hover:gap-2 transition-all`}>
+                Ask Support <FiArrowRight size={14} />
               </button>
             </motion.div>
           ))}

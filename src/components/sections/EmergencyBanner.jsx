@@ -16,18 +16,18 @@ export default function EmergencyBanner() {
             </div>
             <div>
               <h2 className="font-display text-2xl md:text-3xl font-bold">Need Immediate Medical Assistance?</h2>
-              <p className="text-white/80 mt-1">Our emergency team is available 24/7 — don't wait, call now.</p>
+              <p className="text-white/80 mt-1">Our emergency team is available 24/7 - don't wait, call now.</p>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-            <a href="tel:+919876543210"
+            <a href="tel:+2348009110000"
               className="flex items-center gap-2 bg-white text-red-600 font-bold px-6 py-3 rounded-xl hover:bg-red-50 transition-colors shadow-lg">
               <FiPhone size={18} />
               Call Emergency
             </a>
             <div className="flex items-center gap-2 bg-white/10 border border-white/30 px-6 py-3 rounded-xl">
               <FiPhone size={16} />
-              <span className="font-semibold">+91 98765 43210</span>
+              <span className="font-semibold">+234 800 911 0000</span>
             </div>
           </div>
         </motion.div>

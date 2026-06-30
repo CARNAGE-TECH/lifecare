@@ -4,8 +4,8 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 
 const testimonials = [
   { name: 'Amanda Foster', img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80&fit=crop&face', rating: 5, text: 'The care I received at LifeCare Hospital was exceptional. The doctors were knowledgeable, compassionate, and took time to explain everything. I felt truly cared for throughout my entire stay.' },
-  { name: 'Robert Thompson', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&fit=crop&face', rating: 5, text: 'After my cardiac procedure, I was amazed at the level of post-operative care. The nursing staff was attentive 24/7 and the facilities were world-class. Highly recommend LifeCare!' },
-  { name: 'Priya Sharma', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&fit=crop&face', rating: 5, text: 'LifeCare Hospital gave me a new lease on life. The orthopedic team is outstanding — I walked out pain-free after years of suffering. The entire staff made the experience comfortable.' },
+  { name: 'Robert Thompson', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&fit=crop&face', rating: 5, text: 'After my cardiac procedure, I was amazed at the level of post-operative care. The nursing staff was attentive 24/7 and the facilities were excellent. Highly recommend LifeCare.' },
+  { name: 'Priya Sharma', img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&fit=crop&face', rating: 5, text: 'LifeCare Hospital gave me a new lease on life. The orthopedic team was outstanding - I walked out pain-free after years of suffering. The entire staff made the experience comfortable.' },
 ]
 
 export default function Testimonials() {
@@ -46,23 +46,23 @@ export default function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <p className="text-text-muted text-lg leading-relaxed mb-6 italic">"{testimonials[current].text}"</p>
+              <p className="text-text-muted text-lg leading-relaxed mb-6 italic">&quot;{testimonials[current].text}&quot;</p>
               <p className="font-bold text-medical-blue">{testimonials[current].name}</p>
             </motion.div>
           </AnimatePresence>
 
           <div className="flex justify-center items-center gap-4 mt-8">
-            <button onClick={() => setCurrent(p => (p - 1 + testimonials.length) % testimonials.length)}
+            <button type="button" aria-label="Previous testimonial" onClick={() => setCurrent(p => (p - 1 + testimonials.length) % testimonials.length)}
               className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-royal-blue hover:text-white transition-colors">
               <FiChevronLeft size={18} />
             </button>
             <div className="flex gap-2">
               {testimonials.map((_, i) => (
-                <button key={i} onClick={() => setCurrent(i)}
+                <button key={i} type="button" aria-label={`Show testimonial ${i + 1}`} onClick={() => setCurrent(i)}
                   className={`w-2.5 h-2.5 rounded-full transition-all ${i === current ? 'bg-royal-blue w-6' : 'bg-royal-blue/30'}`} />
               ))}
             </div>
-            <button onClick={() => setCurrent(p => (p + 1) % testimonials.length)}
+            <button type="button" aria-label="Next testimonial" onClick={() => setCurrent(p => (p + 1) % testimonials.length)}
               className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:bg-royal-blue hover:text-white transition-colors">
               <FiChevronRight size={18} />
             </button>
